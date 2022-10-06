@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*Usuário GitHub:*/ 
+/*Usuário GitHub: Kamarti*/ 
 
 int main(void){
   int opcao, num, num2;
