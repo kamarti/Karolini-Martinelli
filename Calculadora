@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+/*Usuário GitHub:*/ 
+
+int main(void){
+  int opcao, num, num2;
+  
+  printf("Essa calculadora foi feita por mim, Karolini Martinelli.\nAtualmente estou cursando Análise e Desenvolvimento de Sistemas na Universidade La Salle\nMatrícula: 202211295\n\n");
+  do{
+  printf("\n\nDigite um número de acordo com a operação que deseja calcular\n1 - SOMAR\n2 - SUBTRAIR\n3 - DIVIDIR\n4 - MULTIPLICAR\n5 - POTENCIA\n6 - RAIZ QUADRADA\n0 - Fechar\nDIGITE AQUI: ");
+    
+  scanf("%d", &opcao);
+    if(opcao > 0 && opcao < 7){
+    printf("\n\nDigite dois valores, caso queira calcular raiz quadrada digite zero no segundo número: ");
+    scanf("%d%d",&num, &num2);
+      }
+  switch(opcao){
+    case 0: 
+      printf("Fechando...\n");
+      break;
+    case 1:
+      printf("Soma: %d\n", num + num2);
+      break;
+    case 2:
+      printf("Subtração: %d\n", num - num2);
+      break;
+    case 3:
+      while(num2 == 0){
+        printf("\n\n---ATENCAO---\nDivisão por zero não existe\nDigite um valor maior que zero:   ");
+        scanf("%d", &num2);
+        }
+      printf("Divisao: %d\n", num / num2);
+      break;
+    case 4:
+      printf("Multiplicação: %d\n", num * num2);
+      break;
+    case 5:
+      printf("Potência: %.1f\n", pow(num, num2));
+      break;
+    
+    case 6:
+      while(num2 != 0 ){
+      printf("\nPor favor Digite 0: ");
+      scanf("%d", &num2);
+        }
+      printf("Raiz quadrada: %.2f\n", sqrt(num));
+      break;
+    default:
+    printf("\n\n-----Opção inválida----\n\n  ");
+    }
+    }while(opcao != 0);
+
+  
+  }
